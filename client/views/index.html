@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <meta charset="utf-8">
+        <title>ToDo</title>
+        
+    </head>
+    <body>
+        <div ng-controller="myController">
+            <h1> There are {{todos.length}} ToDos on the List</h1>
+            <ul>
+                <li ng-repeat="do in todos">
+                    {{do.subject}}
+                </li>
+            </ul>
+            <form ng-submit="createToDo()">
+                <input type="text" placeholder="To Do" ng-model="todoSubject" />
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-resource.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script type="text/javascript" src="../js/controller/toDo-controller.js"></script>
+        
+        
+    </body>
+</html>
