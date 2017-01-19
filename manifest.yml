@@ -1,0 +1,11 @@
+---
+# This is a todo list application and a trial version
+applications:
+    - name: Shrekotodolist
+      instances: 2
+      memory: 512MB
+      command: node server.js
+sevices:
+    - mongome
+    
+  
